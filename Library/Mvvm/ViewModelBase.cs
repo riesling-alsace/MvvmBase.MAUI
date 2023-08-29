@@ -5,7 +5,7 @@ namespace Riesling.Library.Mvvm {
 
 		#region Events
 
-		protected override void RaisePropertiesChanged(IEnumerable<string> propertyNames) {
+		protected override void RaisePropertiesChanged(params string[] propertyNames) {
 			if (MainThread.IsMainThread) {
 				base.RaisePropertiesChanged(propertyNames);
 			} else {
